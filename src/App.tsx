@@ -16,14 +16,16 @@ function App() {
     setList(list.map((item, i) => (i === index ? newUser : item)));
   }
   return (
-    <div>
-      <ShowUserList
-        list={list}
-        editByIndex={editIndex}
-        switchEdit={switchEdit}
-        saveChanges={updateUser}
-      />
-      <CreateUserList list={list} setList={setList} />
+    <div className="container">
+      <div className="flex flex-col items-center gap-8">
+        <ShowUserList
+          list={list}
+          editByIndex={editIndex}
+          switchEdit={switchEdit}
+          saveChanges={updateUser}
+        />
+        <CreateUserList list={list} setList={setList} />
+      </div>
     </div>
   );
 }
